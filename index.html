@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Jasa bongkar bangunan, rumah, gedung, dan ruko di Bandung & Jawa Barat. Profesional, cepat, aman, & siap terima beli material bekas bongkaran. Hubungi kami!">
+    <title>Jasa Bongkar Bangunan Bandung | Profesional, Aman & Terpercaya</title>
+
+    <!-- Import Font Poppins dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #2C3639;
+            /* Dark earth tone / Industrial */
+            --secondary: #3F4E4F;
+            --accent: #DCD7C9;
+            /* Sand/Earth */
+            --highlight: #E36414;
+            /* Safety Orange */
+            --bg-light: #F9F9F9;
+            --text-dark: #222;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        /* Navbar Modern */
+        header {
+            background-color: rgba(44, 54, 57, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--highlight);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--highlight);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Hero Section Premium */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 20px 80px;
+            background: linear-gradient(rgba(44, 54, 57, 0.85), rgba(44, 54, 57, 0.92)),
+                url('assets/foto1.jpg') center/cover fixed;
+            color: #fff;
+        }
+
+        .hero-badge {
+            background-color: rgba(227, 100, 20, 0.25);
+            color: var(--highlight);
+            padding: 8px 22px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid var(--highlight);
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            max-width: 950px;
+            line-height: 1.25;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            max-width: 650px;
+            margin-bottom: 35px;
+            color: #d1d1d1;
+        }
+
+        /* Tombol Modern */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--highlight);
+            color: #fff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #c75610;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(227, 100, 20, 0.35);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+        }
+
+        /* Stats Counter Bar */
+        .stats-bar {
+            background: #1a2224;
+            color: #fff;
+            padding: 45px 8%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+            border-bottom: 4px solid var(--highlight);
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--highlight);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        /* Section Global */
+        .section {
+            padding: 90px 8%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            color: #666;
+            font-size: 1.05rem;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Grid Layanan */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 35px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            transition: all 0.4s ease;
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--highlight);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-icon {
+            font-size: 2.4rem;
+            margin-bottom: 20px;
+            background: rgba(227, 100, 20, 0.1);
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .card p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Process Steps Section */
+        .process-bg {
+            background-color: #f0f2f3;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .process-step {
+            background: #fff;
+            padding: 30px 25px;
+            border-radius: 14px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            position: relative;
+        }
+
+        .step-num {
+            width: 45px;
+            height: 45px;
+            background: var(--highlight);
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+
+        .process-step h4 {
+            font-size: 1.15rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .process-step p {
+            font-size: 0.92rem;
+            color: #666;
+        }
+
+        /* Keunggulan (Features) */
+        .features {
+            background-color: var(--primary);
+            color: #fff;
+        }
+
+        .features .section-header h2 {
+            color: #fff;
+        }
+
+        .features .section-header p {
+            color: #ccc;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .feature-item .card-icon {
+            margin: 0 auto 20px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--highlight);
+        }
+
+        .feature-item p {
+            color: #d1d1d1;
+            font-size: 0.95rem;
+        }
+
+        /* Galeri & Dokumentasi Styling */
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 22px;
+            border: 2px solid var(--secondary);
+            background: transparent;
+            color: var(--primary);
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--highlight);
+            color: #fff;
+            border-color: var(--highlight);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            background: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            cursor: pointer;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item video {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            background: #000;
+        }
+
+        .video-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(227, 100, 20, 0.9);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* Testimonial Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid #eee;
+        }
+
+        .stars {
+            color: #f39c12;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-card p {
+            color: #555;
+            font-style: italic;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .client-avatar {
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .client-detail h4 {
+            font-size: 0.95rem;
+            color: var(--primary);
+        }
+
+        .client-detail p {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 0;
+            font-style: normal;
+        }
+
+        /* Modal Lightbox */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 2.5rem;
+            cursor: pointer;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        /* Footer Modern */
+        footer {
+            background-color: #1a2224;
+            color: #fff;
+            padding: 60px 8% 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--highlight);
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        .footer-col p {
+            color: #aaa;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .footer-col strong {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* Sticky Action Bar for Mobile Phones */
+        .mobile-action-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #1a2224;
+            padding: 10px 15px;
+            z-index: 9999;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+            gap: 10px;
+        }
+
+        .mobile-btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .btn-wa-mobile {
+            background: #25D366;
+        }
+
+        .btn-call-mobile {
+            background: var(--highlight);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            body {
+                padding-bottom: 60px;
+            }
+
+            .mobile-action-bar {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                background: rgba(30, 38, 40, 0.98);
+                padding: 20px;
+                border-radius: 12px;
+                text-align: center;
+            }
+
+            header {
+                flex-wrap: wrap;
+                padding: 15px 6%;
+            }
+
+            .section {
+                padding: 60px 6%;
+            }
+
+            .stats-bar {
+                padding: 30px 6%;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo">Jasa Bongkar<span>Bandung</span></div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#beranda" onclick="closeMenu()">Beranda</a></li>
+                <li><a href="#layanan" onclick="closeMenu()">Layanan</a></li>
+                <li><a href="#proses" onclick="closeMenu()">Alur Kerja</a></li>
+                <li><a href="#keunggulan" onclick="closeMenu()">Keunggulan</a></li>
+                <li><a href="#galeri" onclick="closeMenu()">Galeri Proyek</a></li>
+                <li><a href="#testimoni" onclick="closeMenu()">Testimoni</a></li>
+                <li><a href="#kontak" onclick="closeMenu()">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero">
+        <div class="hero-badge">🏆 Spesialis Pembongkaran Bangunan #1 Bandung</div>
+        <h1>Solusi Pembongkaran Bangunan Tuntas, Safe & Bergaransi</h1>
+        <p>Terpercaya melayani pembongkaran rumah, gedung, ruko, hingga fasilitas industri di Bandung Raya. Dikerjakan
+            oleh armada ahli dengan garansi lahan rata tanah & siap beli material bekas Anda.</p>
+        <div class="btn-group">
+            <a href="https://wa.me/6281234567890" class="btn btn-primary">💬 Konsultasi Pembongkaran</a>
+            <a href="tel:081234567890" class="btn btn-secondary">📞 Hubungi Telepon Langsung</a>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stat-item">
+            <h3>250+</h3>
+            <p>Proyek Berhasil Diselesaikan</p>
+        </div>
+        <div class="stat-item">
+            <h3>12+</h3>
+            <p>Tahun Pengalaman Kerja</p>
+        </div>
+        <div class="stat-item">
+            <h3>100%</h3>
+            <p>Lahan Rata & Bebas Puing</p>
+        </div>
+        <div class="stat-item">
+            <h3>50+</h3>
+            <p>Armada Truk & Alat Berat</p>
+        </div>
+    </div>
+
+    <!-- Section Layanan -->
+    <section id="layanan" class="section">
+        <div class="section-header">
+            <h2>Layanan Unggulan Kami</h2>
+            <p>Solusi komprehensif pembongkaran, pembersihan lahan, dan jual beli material bongkaran dengan standar
+                profesionalisme tinggi di Bandung.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="card">
+                <div class="card-icon">🏗️</div>
+                <h3>Bongkar Total Bangunan</h3>
+                <p>Pembongkaran menyeluruh untuk rumah tinggal, gedung tua, ruko, hingga fasilitas komersial. Kami
+                    robohkan struktur hingga rata tanah dengan peralatan modern dan penanganan aman terhadap bangunan
+                    sekitarnya.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔨</div>
+                <h3>Bongkar Renovasi & Parsial</h3>
+                <p>Pembongkaran spesifik pada bagian tertentu seperti pembongkaran atap, tembok penyekat, coran beton,
+                    atau interior toko tanpa merusak atau mengganggu struktur utama yang tetap dipertahankan.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">♻️</div>
+                <h3>Jual Beli Material Bekas</h3>
+                <p>Kami bersedia membeli sisa bongkaran Anda dengan harga bersaing. Meliputi kayu jati, kusen, besi
+                    cor/baja, genteng, seng, saniter, hingga kabel tembaga. Nilainya bisa langsung dipotongkan dari
+                    biaya jasa bongkar.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🚛</div>
+                <h3>Pembersihan & Buang Puing</h3>
+                <p>Armada truk engkel & double dump siap mengangkut seluruh puing semen, batu bata, dan limbah
+                    konstruksi hingga bersih tuntas, menjadikan lokasi siap langsung dilakukan pembangunan baru.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🚜</div>
+                <h3>Perataan Lahan & Cut and Fill</h3>
+                <p>Pembersihan sisa pondasi lama di dalam tanah, pengurukan, perataan tanah (land clearing), serta
+                    pemadatan tanah agar memiliki daya dukung optimal untuk pondasi konstruksi berikutnya.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏭</div>
+                <h3>Pembongkaran Rangka Baja & Gudang</h3>
+                <p>Spesialis pemotongan dan pembongkaran pabrik, gudang, serta struktur rangka baja berat menggunakan
+                    teknik pemotongan presisi, alat berat crane, dan penerapan K3 yang sangat ketat.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Alur Kerja -->
+    <section id="proses" class="section process-bg">
+        <div class="section-header">
+            <h2>Alur Kerja Pembongkaran</h2>
+            <p>Proses kerja terstruktur dan transparan untuk kenyamanan dan keamanan Anda.</p>
+        </div>
+
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-num">1</div>
+                <h4>Konsultasi & Estimasi</h4>
+                <p>Hubungi kami melalui WA atau Telepon untuk menyampaikan detail bangunan dan rencana pengerjaan.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-num">2</div>
+                <h4>Survei Lokasi</h4>
+                <p>Tim ahli kami datang langsung ke lokasi di Bandung untuk mengukur volume dan mengecek kondisi
+                    lingkungan bangunan.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-num">3</div>
+                <h4>Kesepakatan & Eksekusi</h4>
+                <p>Penyusunan SPK/RAB borongan transparan. Pembongkaran dikerjakan sesuai jadwal dan standar keselamatan
+                    tinggi.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-num">4</div>
+                <h4>Pembersihan & Pelunasan</h4>
+                <p>Puing diangkut hingga bersih rata tanah. Lahan siap dipakai dan penyerahan dilakukan dengan kepuasan
+                    100%.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Keunggulan -->
+    <section id="keunggulan" class="section features">
+        <div class="section-header">
+            <h2>Mengapa Klien Mempercayai Kami?</h2>
+            <p>Kami tidak sekadar membongkar, tapi memberikan rasa tenang dan hasil kerja terbaik selama proyek
+                berlangsung.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="card-icon">👷‍♂️</div>
+                <h4>Tenaga Profesional</h4>
+                <p>Dikerjakan oleh spesialis pembongkaran berpengalaman yang paham struktur bangunan dan meminimalisir
+                    risiko dampak tetangga.</p>
+            </div>
+            <div class="feature-item">
+                <div class="card-icon">⚡</div>
+                <h4>Tepat Waktu & Cepat</h4>
+                <p>Jadwal pengerjaan terukur. Kami menyelesaikan pembongkaran sesuai tenggat waktu yang disepakati tanpa
+                    mengulur waktu.</p>
+            </div>
+            <div class="feature-item">
+                <div class="card-icon">🤝</div>
+                <h4>Sistem Transparan & Adil</h4>
+                <p>Perhitungan harga borongan jelas tanpa biaya siluman. Nilai jual material bekas Anda dipotongkan
+                    langsung dari total biaya.</p>
+            </div>
+            <div class="feature-item">
+                <div class="card-icon">🛡️</div>
+                <h4>Garansi Lahan Rata</h4>
+                <p>Jaminan lahan bersih dari puing semen maupun sisa pondasi, sehingga tanah siap langsung dipasang
+                    tiang pancang baru.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Galeri -->
+    <section id="galeri" class="section">
+        <div class="section-header">
+            <h2>Dokumentasi & Galeri Proyek</h2>
+            <p>Bukti pengerjaan nyata tim Jasa Bongkar Bandung di lapangan. Klik foto untuk memperbesar.</p>
+        </div>
+
+        <div class="gallery-filter">
+            <button class="filter-btn active" onclick="filterGallery('all', this)">Semua Dokumentasi</button>
+            <button class="filter-btn" onclick="filterGallery('foto', this)">Foto Pembongkaran</button>
+            <button class="filter-btn" onclick="filterGallery('video', this)">Video Lapangan</button>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- Video 1 -->
+            <div class="gallery-item" data-category="video">
+                <span class="video-badge">▶ Video Lapangan</span>
+                <video src="assets/video1.mp4" controls preload="metadata"></video>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="gallery-item" data-category="video">
+                <span class="video-badge">▶ Video Lapangan</span>
+                <video src="assets/video2.mp4" controls preload="metadata"></video>
+            </div>
+
+            <!-- Foto 1 -->
+            <div class="gallery-item" data-category="foto">
+                <img src="assets/foto1.jpg" alt="Proyek Pembongkaran 1" onclick="openModal(this)">
+            </div>
+
+            <!-- Foto 2 -->
+            <div class="gallery-item" data-category="foto">
+                <img src="assets/foto2.jpg" alt="Proyek Pembongkaran 2" onclick="openModal(this)">
+            </div>
+
+            <!-- Foto 3 -->
+            <div class="gallery-item" data-category="foto">
+                <img src="assets/foto3.jpg" alt="Proyek Pembongkaran 3" onclick="openModal(this)">
+            </div>
+
+            <!-- Foto 4 -->
+            <div class="gallery-item" data-category="foto">
+                <img src="assets/foto4.jpg" alt="Proyek Pembongkaran 4" onclick="openModal(this)">
+            </div>
+
+            <!-- Foto 5 -->
+            <div class="gallery-item" data-category="foto">
+                <img src="assets/foto5.jpg" alt="Proyek Pembongkaran 5" onclick="openModal(this)">
+            </div>
+
+            <!-- Foto 6 -->
+            <div class="gallery-item" data-category="foto">
+                <img src="assets/foto6.jpg" alt="Proyek Pembongkaran 6" onclick="openModal(this)">
+            </div>
+
+            <!-- Foto 7 -->
+            <div class="gallery-item" data-category="foto">
+                <img src="assets/foto7.jpg" alt="Proyek Pembongkaran 7" onclick="openModal(this)">
+            </div>
+
+            <!-- Foto 8 -->
+            <div class="gallery-item" data-category="foto">
+                <img src="assets/foto8.jpg" alt="Proyek Pembongkaran 8" onclick="openModal(this)">
+            </div>
+
+            <!-- Foto 9 -->
+            <div class="gallery-item" data-category="foto">
+                <img src="assets/foto9.jpg" alt="Proyek Pembongkaran 9" onclick="openModal(this)">
+            </div>
+
+            <!-- Foto 10 -->
+            <div class="gallery-item" data-category="foto">
+                <img src="assets/foto10.jpg" alt="Proyek Pembongkaran 10" onclick="openModal(this)">
+            </div>
+
+            <!-- Foto 11 -->
+            <div class="gallery-item" data-category="foto">
+                <img src="assets/foto11.jpg" alt="Proyek Pembongkaran 11" onclick="openModal(this)">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Testimoni -->
+    <section id="testimoni" class="section process-bg">
+        <div class="section-header">
+            <h2>Apa Kata Klien Kami?</h2>
+            <p>Pengalaman nyata para pemilik properti dan kontraktor yang mempercayakan proyeknya kepada kami.</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Proses pembongkaran rumah tua saya di Buah Batu berjalan sangat rapi. Puing diangkut bersih dan
+                    material bekasnya dihargai tinggi sehingga sangat menghemat biaya."</p>
+                <div class="client-info">
+                    <div class="client-avatar">HD</div>
+                    <div class="client-detail">
+                        <h4>H. Dedi Supriadi</h4>
+                        <p>Pemilik Rumah - Buah Batu, Bandung</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Sangat profesional! Kami butuh pembongkaran ruko 3 lantai secara cepat karena tenggat proyek
+                    developer. Pekerjaan rampung 2 hari lebih cepat dari target."</p>
+                <div class="client-info">
+                    <div class="client-avatar">IR</div>
+                    <div class="client-detail">
+                        <h4>Ir. Rahmat Hidayat</h4>
+                        <p>Kontraktor Properti - Cimahi</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Tim mas Jasa Bongkar komunikatif dan sopan dengan tetangga sekitar selama pembongkaran. Tidak ada
+                    komplain dari lingkungan. Lahan langsung bersih siap bangun."</p>
+                <div class="client-info">
+                    <div class="client-avatar">SK</div>
+                    <div class="client-detail">
+                        <h4>Ibu Siska Kusuma</h4>
+                        <p>Pemilik Ruko - Dago, Bandung</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>Jasa Bongkar Bandung</h3>
+                <p>Partner spesialis terpercaya Anda untuk pembongkaran bangunan, pembersihan lahan, dan jual beli
+                    material bekas di wilayah Bandung & sekitarnya.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Hubungi Kami</h3>
+                <p><strong>WhatsApp:</strong> +62 857-9501-9128</p>
+                <p><strong>Telepon:</strong> +62 857-9501-9128</p>
+                <br>
+                <a href="https://wa.me/6285795019128" class="btn btn-primary"
+                    style="padding: 10px 20px; font-size: 0.95rem;">💬 Chat WhatsApp Sekarang</a>
+            </div>
+            <div class="footer-col">
+                <h3>Area Layanan Utama</h3>
+                <p>• Kota Bandung (Seluruh Kecamatan)<br>• Kota Cimahi<br>• Kab. Bandung Barat (Padalarang,
+                    Lembang)<br>• Kab. Bandung (Soreang, Banjaran)<br></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Jasa Bongkar Bandung. Hak Cipta Dilindungi. Didesain untuk Kinerja & Konversi Maksimal.
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="mobile-action-bar">
+        <a href="https://wa.me/6285795019128" class="mobile-btn btn-wa-mobile">💬 WhatsApp</a>
+        <a href="tel:085795019128" class="mobile-btn btn-call-mobile">📞 Telepon</a>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="modal" onclick="closeModal(event)">
+        <span class="modal-close" onclick="closeModal(event)">&times;</span>
+        <div id="modalContainer" style="max-width:90%; max-height:85vh;"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Toggle Mobile Menu Navigation
+        function toggleMenu() {
+            const nav = document.getElementById('navbar');
+            nav.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const nav = document.getElementById('navbar');
+            nav.classList.remove('active');
+        }
+
+        // Filter Galeri
+        function filterGallery(category, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Modal Lightbox
+        function openModal(element) {
+            const container = document.getElementById('modalContainer');
+            container.innerHTML = '';
+
+            if (element.tagName === 'IMG') {
+                const img = document.createElement('img');
+                img.src = element.src;
+                img.className = 'modal-content';
+                container.appendChild(img);
+            }
+
+            document.getElementById('lightboxModal').classList.add('active');
+        }
+
+        function closeModal(event) {
+            if (event.target.id === 'lightboxModal' || event.target.className === 'modal-close') {
+                document.getElementById('lightboxModal').classList.remove('active');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
