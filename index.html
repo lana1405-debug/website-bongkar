@@ -528,6 +528,71 @@
             font-style: normal;
         }
 
+        /* Lokasi / Map Section */
+        .location-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 35px;
+            align-items: stretch;
+        }
+
+        .location-info {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 16px;
+            padding: 35px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .location-info h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 14px;
+        }
+
+        .location-info .address-text {
+            color: #555;
+            font-size: 0.98rem;
+            margin-bottom: 22px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .location-info .address-text span.pin {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .location-info .btn-primary {
+            align-self: flex-start;
+        }
+
+        .map-frame {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #eee;
+            min-height: 380px;
+        }
+
+        .map-frame iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 380px;
+            border: 0;
+            display: block;
+        }
+
+        @media (max-width: 900px) {
+            .location-wrap {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Modal Lightbox */
         .modal {
             display: none;
@@ -705,6 +770,7 @@
                 <li><a href="#keunggulan" onclick="closeMenu()">Keunggulan</a></li>
                 <li><a href="#galeri" onclick="closeMenu()">Galeri Proyek</a></li>
                 <li><a href="#testimoni" onclick="closeMenu()">Testimoni</a></li>
+                <li><a href="#lokasi" onclick="closeMenu()">Lokasi</a></li>
                 <li><a href="#kontak" onclick="closeMenu()">Kontak</a></li>
             </ul>
         </nav>
@@ -994,6 +1060,31 @@
         </div>
     </section>
 
+    <!-- Section Lokasi -->
+    <section id="lokasi" class="section">
+        <div class="section-header">
+            <h2>Lokasi Kami</h2>
+            <p>Kunjungi atau hubungi kantor kami untuk konsultasi langsung terkait proyek pembongkaran Anda.</p>
+        </div>
+
+        <div class="location-wrap">
+            <div class="location-info">
+                <h3>Alamat Kantor</h3>
+                <p class="address-text">
+                    <span class="pin">📍</span>
+                    <span>Gg. Laksana RT 08/05 No. 20B, Kota Bandung, Jawa Barat 40232</span>
+                </p>
+                <a href="https://maps.app.goo.gl/vPcG7TAMK1cbaVwr7" target="_blank" rel="noopener" class="btn btn-primary">🗺️ Buka di Google Maps</a>
+            </div>
+            <div class="map-frame">
+                <iframe
+                    src="https://www.google.com/maps?q=Gg.+Laksana+RT+08%2F05+No.+20B%2C+Kota+Bandung%2C+Jawa+Barat+40232&output=embed"
+                    allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    title="Peta Lokasi Jasa Bongkar Bandung"></iframe>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer id="kontak">
         <div class="footer-content">
@@ -1004,6 +1095,7 @@
             </div>
             <div class="footer-col">
                 <h3>Hubungi Kami</h3>
+                <p><strong>Alamat:</strong> Gg. Laksana RT 08/05 No. 20B, Kota Bandung, Jawa Barat 40232</p>
                 <p><strong>WhatsApp:</strong> +62 8212374582</p>
                 <p><strong>Telepon:</strong> +62 8212374582</p>
                 <br>
